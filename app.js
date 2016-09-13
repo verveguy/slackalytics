@@ -28,11 +28,20 @@ api.post('/collect', function(req){
   
   console.log("REQUEST:", JSON.stringify(req));
   
-  // this comes via API Gateway params, set at deploy time
+  // this comes via AWS API Gateway params, set at deploy time
   // TODO: make claudia prompt for these with a configure task
-  var GA_key = req.env.GOOGLE_ANALYTICS_UAID;
+  var GA_key;
   
-  var channel = {
+  try {
+    GA_key = req.env.GOOGLE_ANALYTICS_UAID;
+  }
+  catch (err) {
+    const resp = "Missing GOOGLE_ANALYTICS_UAID from AWS API Gateway params. Please set";
+    console.error(resp);
+    return resp;  // bail
+  }
+  
+  const channel = {
     id:   req.post.channel_id,
     name:   req.post.channel_name
   };
