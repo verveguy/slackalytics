@@ -19,3 +19,4 @@ Change Log
 - Moved the GOOGLE_ANALYTICS_UAID into an AWS API Gateway context param, removing all secrets from the code itself.
 (You will need to set this via AWS API Gateway console)
  
+![AWS API Gateway Stage Variable](stage_vars.png)
