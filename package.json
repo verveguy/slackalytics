@@ -19,6 +19,7 @@
     "create": "claudia create --region us-east-1 --allow-recursion --api-module app",
     "deploy": "claudia update",
     "destroy": "claudia destroy",
+    "configure": "claudia update --ga-tracker-id",
     "start": "ntl"
   },
   "files": [ "*.js" ]

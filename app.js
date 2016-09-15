@@ -28,6 +28,7 @@ api.get('/', function(req){
   return 'here';
 });
 
+api.addPostDeployConfig('GOOGLE_ANALYTICS_UAID', 'Google Analytics Tracker ID (UA-XXXXXXXX-X):', 'ga-tracker-id');
 
 // 
 api.post('/collect', function(req){
