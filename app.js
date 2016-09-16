@@ -31,7 +31,7 @@ api.get('/', function(req){
 api.addPostDeployConfig('GOOGLE_ANALYTICS_UAID', 'Google Analytics Tracker ID (UA-XXXXXXXX-X):', 'ga-tracker-id');
 
 // 
-api.post('/collect', function(req){
+api.post('/collect', function(req) {
   
   console.log("REQUEST:", JSON.stringify(req));
   
@@ -119,7 +119,9 @@ api.post('/collect', function(req){
   //Make Post Request to GA via Promise
   let options = {
       method: 'POST',
-      uri: 'https://www.google-analytics.com/collect?'+ qs.stringify(data),
+      uri: 'https://www.google-analytics.com/collect',
+      body: qs.stringify(data),
+      headers: { 'User-Agent': 'slackalytics' }
   };
 
   return reqpromise(options)
