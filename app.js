@@ -59,6 +59,8 @@ app.post('/collect', function(req, res){
 	var exclaCount = searchM(/!/g);
 	var questionMark = searchM(/\?/g);
 	var elipseCount = searchM(/\.\.\./g);
+	var alertCount = searchM(/<!/g);
+	var urlCount = searchM(/<http/g);
 
 
 	//Structure Data
@@ -74,9 +76,10 @@ app.post('/collect', function(req, res){
 		cm1: 	wordCount,
 		cm2: 	emojiCount,
 		cm3: 	exclaCount,
-	//	cm4: 	letterCount,
+		cm4: 	questionMark,
 		cm5: 	elipseCount, 
-		cm6: 	questionMark, //need to set up in GA
+		cm6: 	urlCount,
+		cm7: 	alertCount,
 		dh:		teamDomain+".slack.com",
 		dp:		"/"+channel.name,
 		dt:		"Slack Channel: "+channel.name,
