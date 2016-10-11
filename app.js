@@ -84,7 +84,8 @@ api.post('/collect', function(req) {
   let exclaCount = searchM(/!/g);
   let questionMark = searchM(/\?/g);
   let elipseCount = searchM(/\.\.\./g);
-  let letterCount = searchM(/./g);
+  let alertCount = searchM(/<!/g);
+  let urlCount = searchM(/<http/g);
 
 
   //Structure Data
@@ -101,9 +102,10 @@ api.post('/collect', function(req) {
     cm1:   wordCount,
     cm2:   emojiCount,
     cm3:   exclaCount,
-    cm4:   letterCount,
-    cm5:   elipseCount, 
-    cm6:   questionMark,
+    cm4: 	questionMark,
+    cm5: 	elipseCount, 
+    cm6: 	urlCount,
+    cm7: 	alertCount,
     dh:    teamDomain+".slack.com",
     dp:    "/"+channel.name,  // we treat channels like URL paths
     dt:    "channel: " + channel.name,
