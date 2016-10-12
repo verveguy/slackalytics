@@ -48,7 +48,7 @@ You can also use the AWS console and set the secret on the AWS API Gateway stage
 
 Note that the AWS us-east-1 region is assumed - change this in package.json.
 
-#1 
+[TODO: Source AWS region from build env](https://github.com/verveguy/slackalytics/issues/1)
 
 After initial deployment, you'll have a new file claudia.json created. This is a generated build artifact that captures the information about your deployed instance, including the AWS Lambda object identifiers, etc. 
 
