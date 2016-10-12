@@ -22,7 +22,7 @@ Change Log
 
 Since the whole thing is packaged as an npm package, you should be able to just use
 
-  npm update
+`npm update`
   
 To get the package ready for use
 
