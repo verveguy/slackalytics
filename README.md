@@ -15,7 +15,7 @@ Blog post on this port coming Real Soon Now(tm)
 Change Log
 ------------
 
-09/14/16 - reworked for AWS Landba and friends using Claudiajs
+09/14/16 - reworked for AWS Lambda and friends using Claudiajs
 - Moved the GOOGLE_ANALYTICS_UAID into an AWS API Gateway context param, removing all secrets from the code itself.
  
 ## Build
@@ -62,7 +62,7 @@ If you modify the code, you can easily *update* your deployed service using
 
 ## Removal
 
-If you no longer want this service deployed on AWS, simple
+If you no longer want this service deployed on AWS, simply
 
 `npm run destroy`
 
