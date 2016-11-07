@@ -38,7 +38,7 @@ After creating the initial deployment, you can either configure the Google Analy
 
 `npm run configure`
   
-And you'll be prompte to enter this secret. Note that the secret is NOT stored locally.
+And you'll be prompted to enter this secret. Note that the secret is NOT stored locally.
 
 You can also use the AWS console and set the secret on the AWS API Gateway stage configuration:
 
