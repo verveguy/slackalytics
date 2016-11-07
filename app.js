@@ -1,7 +1,4 @@
 "use strict";
-/*jshint esversion: 6 */
-/*jslint node: true */
-/* jshint node: true */
 
 /* 
 
@@ -57,7 +54,6 @@ api.post('/collect', function(req) {
   console.log("REQUEST:", JSON.stringify(req));
   
   // this comes via AWS API Gateway params, set at deploy time
-  // TODO: make claudia prompt for these with a configure task
   var GA_key;
   
   try {
@@ -109,7 +105,7 @@ api.post('/collect', function(req) {
   let urlCount = searchM(/<http/g);
 
 
-  //Structure Data
+  // Google Analytics collect struct
   let data = {
     v:     1,
     tid:   GA_key,
@@ -134,7 +130,6 @@ api.post('/collect', function(req) {
     ec:   "slack: "+ channel.name + "|" + channel.id,
     ea:   "post by " + user.name,
     el:   "post by " + user.name,
-    //el:   msgText, /* using this leaks message data. caution */
     ev:   1 
   };
   console.log(JSON.stringify(data));
