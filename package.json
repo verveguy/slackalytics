@@ -2,6 +2,11 @@
   "name": "SlackGAIntegration",
   "version": "1.0.0",
   "description": "Integration with GA to track Slack usage",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verveguy/slackalytics"
+  },
+  "license": "MIT",
   "main": "app.js",
   "dependencies": {
     "request": "^2.54.0",
