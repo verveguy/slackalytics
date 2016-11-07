@@ -1,0 +1,12 @@
+extends: standard
+installedESLint: true
+plugins:
+  - standard
+  - promise
+rules:
+  brace-style:
+    - 0
+    - allman
+    - allowSingleLine: true
+  camelcase: 
+    - 0
