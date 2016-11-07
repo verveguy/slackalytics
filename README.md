@@ -28,7 +28,7 @@ To get the package ready for use
 
 ## Deployment
 
-claudiajs handles the deployment to AWS Lambda and AWS APi Gateway.
+claudiajs handles the deployment to AWS Lambda and AWS API Gateway.
 
 For convenience, package.json includes the necessary invocation so you can use npm run
 
