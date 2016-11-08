@@ -51,7 +51,7 @@ api.addPostDeployConfig('GOOGLE_ANALYTICS_UAID', 'Google Analytics Tracker ID (U
 
 //
 api.post('/collect', function (req) {
-  console.log('REQUEST:', JSON.stringify(req))
+  console.log('SLACK IN', JSON.stringify(req))
 
   // this comes via AWS API Gateway params, set at deploy time
   var GA_key
@@ -112,7 +112,7 @@ api.post('/collect', function (req) {
     t: 'event',
     // ni: true,  // this is supposedly about 'bounce rate' but setting true means you get NO DATA
 
-    cid: user.id,  //clientID (user ID)
+    cid: user.id,  // clientID (user ID)
     uid: user.id,  // userID
     ds: 'slack', // data source
     dh: teamDomain + '.slack.com',  // doc host
@@ -140,7 +140,7 @@ api.post('/collect', function (req) {
     el: 'post by ' + user.name,
     ev: 1
   }
-  console.log(JSON.stringify(data))
+  console.log('GA OUT', JSON.stringify(data))
 
   // Make Post Request to GA via Promise
   let options = {
