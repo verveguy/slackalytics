@@ -1,5 +1,5 @@
 {
-  "name": "SlackGAIntegration",
+  "name": "slackalytics",
   "version": "1.0.0",
   "description": "Integration with GA to track Slack usage",
   "repository": {
