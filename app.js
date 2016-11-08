@@ -110,7 +110,6 @@ api.post('/collect', function (req) {
     v: 1,
     tid: GA_key,
     t: 'event',
-    ni: 'true',
     // ni: true,  // this is supposedly about 'bounce rate' but setting true means you get NO DATA
 
     cid: user.id,  //clientID (user ID)
