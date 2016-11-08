@@ -13,7 +13,7 @@
     "querystring": "^0.2.0",
     "claudia-api-builder": "^1.6.0",
     "aws-sdk": "^2.4.11",
-    "request-promise-native" : "^1.0.3"
+    "request-promise-native": "^1.0.3"
   },
   "devDependencies": {
     "claudia": "^1.6.2",
@@ -25,11 +25,14 @@
   },
   "scripts": {
     "test": "echo 'Error: no test specified' && exit 1",
-    "create": "claudia create --region us-east-1 --allow-recursion --api-module app",
-    "redeploy": "claudia update",
+    "create": "claudia create --region us-east-1  --version development --allow-recursion --api-module app",
+    "configure": "claudia update --version development --ga-tracker-id",
+    "redeploy": "claudia update  --version development --cache-api-config apiConfig",
     "destroy": "claudia destroy",
-    "configure": "claudia update --ga-tracker-id",
+    "release": "claudia set-version --version latest",
     "start": "ntl"
   },
-  "files": [ "*.js" ]
+  "files": [
+    "*.js"
+  ]
 }
