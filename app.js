@@ -153,6 +153,7 @@ api.post('/collect', function (req) {
 
   return reqpromise(options)
     .then((parsedBody) => {
+      // console.log('RESPONSE', JSON.stringify(parsedBody))
       console.log('RESPONSE', JSON.stringify(parsedBody))
       return 'OK'
     })
