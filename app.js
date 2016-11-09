@@ -113,7 +113,8 @@ api.post('/collect', function (req) {
     // ni: true,  // this is supposedly about 'bounce rate' but setting true means you get NO DATA
 
     cid: user.id,  // clientID (user ID)
-    uid: user.id,  // userID
+    // uid: user.id,  // userID - but turning this on results in no metrics data capture
+
     ds: 'slack', // data source
     dh: teamDomain + '.slack.com',  // doc host
     dp: '/' + channel.name,  // we treat channels like URL paths
